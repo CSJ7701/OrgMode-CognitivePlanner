@@ -1,0 +1,23 @@
+* OrgMode-CognitivePlanner
+This project is a python based task management system designed to parse, analyze, and score tasks within org-mode documents.
+
+** Project Structure
+The project is based around 3 primary class files: =Task.py=, =Agenda.py=, and =Planner.py=.
+
+** Task
+This is the core data model. It acts as a wrapper around =OrgNode= functions from the =orgparse= python module, tracking and updating custom attributes and logic.
+This is what handles parsing and managing task state and metadata from the source document.
+
+** Agenda
+Responsible for loading the =.org= file and managing the overarching task hierarchy. Maintains a map of all =Task= objects and facilitates navigating relationships.
+
+** Planner
+This is the project's main logic. It coordinates the agenda and applies ACT-R memory activation algorithms alongside a custom urgency heuristic to process and prioritize tasks.
+
+** Usage
+Setup a python environment with Python 3.12 and the =orgparse= library. Do this however you wish; I use =uv=, but other environment management programs (or even your OS package manager) will work.
+
+Run =python CLI.py -h= for a full list of command line arguments.
+=CLI.py= takes a single positional argument (the org file to process).
+The most common switch you will use is =--ref-time=, which is used to calculate scores against a time other than now (this is primarily useful for testing).
+
