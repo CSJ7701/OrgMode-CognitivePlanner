@@ -1,0 +1,84 @@
+# -*- org-use-tag-inheritance: t; -*-
+#+TODO: TODO ACTIVE NEXT | DONE
+
+* PROJECT ECOSYSTEMS
+** TODO Clear the High-Priority Backlog Jam                        :Personal:
+DEADLINE: <2026-06-13 Sat> SCHEDULED: <2026-06-12 Fri>
+:PROPERTIES:
+:Effort:   2.0
+:END:
+:LOGBOOK:
+CLOCK: [2026-06-12 Fri 18:00]--[2026-06-12 Fri 19:00] =>  1:00
+:END:
+- CHRONOLOGICAL BASELINE: Will rank this near the top purely because its scheduled date is today/tomorrow and its deadline is immediate.
+- SYSTEM TARGET RECOMMENDATION: Should score exceptionally high. It has a heavy activation score due to a recent 1-hour clock session (ACT-R recency) combined with intense deadline pressure (Ud calculation). If a :Personal: context is active, it should be the absolute #1 recommendation.
+
+** TODO The Starved Strategic Goal                                   :School:
+DEADLINE: <2026-07-15 Wed> SCHEDULED: <2026-06-15 Mon>
+:PROPERTIES:
+:Effort:   12.0
+:END:
+- CHRONOLOGICAL BASELINE: Will bury this deep in the backlog or schedule it strictly on June 15. Because the deadline is over a month away, it suffers from "task starvation" in standard chronological views.
+- SYSTEM TARGET RECOMMENDATION: Your system should bump this up due to its massive Effort estimate (12 hours = high base urgency) despite the distant deadline. It serves as a perfect test case to see if high-effort, long-term items can break out of task starvation before it's too late.
+
+* CONTEXT SWITCHING & CLUSTERING TESTS
+** ACTIVE Implement Core ACT-R Algorithm                            :Work:
+DEADLINE: <2026-06-18 Thu>
+:PROPERTIES:
+:Effort:   4.0
+:END:
+:LOGBOOK:
+CLOCK: [2026-06-12 Fri 19:00]
+:END:
+- CHRONOLOGICAL BASELINE: Treats this as just another item due on June 18.
+- SYSTEM TARGET RECOMMENDATION: This is currently ACTIVE with an open clock session. Your `process_active_tasks` function will seed the `current_context` with the [:Work:] tag. This acts as the anchor for context-switching penalty evaluations for all other tasks.
+
+** TODO Write Unit Tests for Decay Function                          :Work:
+DEADLINE: <2026-06-25 Thu>
+:PROPERTIES:
+:Effort:   1.5
+:END:
+- CHRONOLOGICAL BASELINE: Sorted far below other tasks because its deadline is almost two weeks away.
+- SYSTEM TARGET RECOMMENDATION: Should receive a significant boost because its tags match the active task's context ([:Work:]). The `get_switch_penalty` function will return `0.0` for this task, while penalizing surrounding :School: or :Personal: tasks, clustering this work task forward to minimize cognitive switching costs.
+
+** TODO Draft Cognitive Science Essay                              :School:
+DEADLINE: <2026-06-16 Tue>
+:PROPERTIES:
+:Effort:   3.0
+:END:
+- CHRONOLOGICAL BASELINE: Sorted ahead of the unit tests task because June 16 comes before June 25.
+- SYSTEM TARGET RECOMMENDATION: Even though the deadline is tight, if the user is currently deep in a [:Work:] context, this task should suffer a `task_switch_penalty` deduction because its symmetric tag difference against [:Work:] is maximum. It should sit lower than a work task with a slightly later deadline.
+
+* HIERARCHY & URGENCY INHERITANCE TESTS
+** TODO Parent Epic: System Architecture Revision                   :School:
+DEADLINE: <2026-06-30 Tue>
+:PROPERTIES:
+:Effort:   1.0
+:END:
+- CHRONOLOGICAL BASELINE: Sorted safely at the end of June.
+- SYSTEM TARGET RECOMMENDATION: This task's inherent urgency is low, but it needs to pull urgency *upward* from its critical children (via `get_child_urgency_recursive`) and push its own deadline constraints *downward* (via `get_parent_urgency_recursive`). 
+
+*** TODO Subtask A: Fix Broken Database Schema                       :School:
+DEADLINE: <2026-06-14 Sun>
+:PROPERTIES:
+:Effort:   5.0
+:END:
+- CHRONOLOGICAL BASELINE: Displayed merely as a nested sub-bullet, often hidden in collapsed tree views.
+- SYSTEM TARGET RECOMMENDATION: Because this subtask has an imminent deadline (June 14) and high effort, its base urgency will explode. This high value must successfully propogate up to the "System Architecture Revision" parent via your recursive child traversal, boosting the parent's overall score.
+
+*** TODO Subtask B: Update Minor Documentation Lines                :School:
+DEADLINE: <2026-07-01 Wed>
+:PROPERTIES:
+:Effort:   0.5
+:END:
+- CHRONOLOGICAL BASELINE: Ignored completely until July.
+- SYSTEM TARGET RECOMMENDATION: Inherent urgency is practically zero (low effort, far deadline). However, because its parent ("System Architecture Revision") is getting slammed by Subtask A's urgency, Subtask B should inherit a portion of that panic downward through `get_parent_urgency_recursive`, tracking higher than an isolated minor task.
+
+* THE AMNESIA EDGE CASE
+** TODO Cold Backlog Ghost Task                                    :Personal:
+DEADLINE: <2026-06-20 Sat>
+:PROPERTIES:
+:Effort:   2.0
+:END:
+- CHRONOLOGICAL BASELINE: Placed squarely in the middle of the schedule based entirely on the June 20 deadline.
+- SYSTEM TARGET RECOMMENDATION: This task has absolutely zero clock data (never interacted with). Your `get_activation` function must cleanly catch the `if not task.clocks:` edge case and return exactly `0.0` without crashing or throwing a math domain error when passing total scores into `math.log()`. Its priority will rely entirely on its baseline deadline urgency.

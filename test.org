@@ -1,0 +1,203 @@
+#+TYP_TODO: TODO NEXT ACTIVE
+
+* ACTIVE [#A] Finalize CogSci Research Report               :School:Academic:
+SCHEDULED: <2026-06-20 Sat> DEADLINE: <2026-06-25 Thu>
+  :PROPERTIES:
+  :Effort:   4.0
+  :END:
+  :LOGBOOK:
+  CLOCK: [2026-06-19 Fri 14:00]--[2026-06-19 Fri 17:00] =>  3:00
+  :END:
+  Baseline: Appears near the top due to the close deadline and high priority status.
+  Our System: Boosted heavily to the top of Immediate Attention due to decaying historical clock activation and compound parent-child urgency tracking.
+
+** NEXT Review ACT-R Decay Equations :School:Math:
+SCHEDULED: <2026-06-19 Fri>
+   :PROPERTIES:
+   :Effort:   2.0
+   :END:
+   :LOGBOOK:
+   CLOCK: [2026-06-19 Fri 10:00]--[2026-06-19 Fri 11:00] =>  1:00
+   :END:
+   Baseline: Mid-tier priority based on past scheduled date.
+   Our System: Groups tightly with the parent report inside the Context bucket because it shares hierarchical lineage and the 'School' tag context.
+
+** TODO Format Final Report LaTeX Template
+   Baseline: Drifts far down chronologically since it lacks its own dates.
+   Our System: Pulled upward into the Context bucket via downward-propagating parent urgency weights, overcoming its lack of explicit dates.
+
+* TODO Update Home Server Machines                                  :Homelab:
+SCHEDULED: <2026-06-18 Thu>
+  :LOGBOOK:
+  CLOCK: [2026-06-18 Thu 20:00]--[2026-06-18 Thu 20:30] =>  0:30
+  :END:
+  Baseline: High up chronologically since scheduled date has passed.
+  Our System: Suppressed into Backlog; the elapsed time since the last brief clock entry triggers significant activation decay, dropping its score.
+
+** TODO [#B] Troubleshoot Storage Node                     :Homelab:Network:
+   Baseline: Buried at the bottom of standard listings because it completely lacks chronological dates.
+   Our System: Inherits partial parent urgency upward, but stays separated in Backlog unless the global context actively switches to Homelab.
+
+*** NEXT Replace Faulty 4TB Drive in Rack
+    Baseline: Completely invisible/buried at the bottom due to deep nesting and zero dates.
+    Our System: Sits quietly in Backlog; requires deep tree traversal to calculate its inherited lineage penalty.
+
+* TODO Debug Planner's Task Switching Cost                   :School:Project:
+SCHEDULED: <2026-06-20 Sat>
+  :PROPERTIES:
+  :Effort:   3.0
+  :END:
+  :LOGBOOK:
+  CLOCK: [2026-06-20 Sat 08:00]--
+  :END:
+  Baseline: Sorted dynamically inline with today's date.
+  Our System: Serves as the active anchor task. Its open clock session sets the current processing context tags to 'School' and 'Project'.
+
+* NEXT [#A] Pay Electricity Bills                        :Financial:Personal:
+DEADLINE: <2026-06-15 Mon>
+  Baseline: Top position because the deadline is critically overdue.
+  Our System: Lands aggressively at the absolute top of the Immediate Attention bucket due to the massive overdue deadline scaling factor.
+
+* TODO Plan Father's Day Dinner BBQ :Family:Personal:
+DEADLINE: <2026-06-21 Sun>
+  :LOGBOOK:
+  CLOCK: [2026-06-15 Mon 18:00]--[2026-06-15 Mon 18:15] =>  0:15
+  :END:
+  Baseline: Elevated position due to the imminent tomorrow deadline.
+  Our System: High priority in Immediate Attention due to deadline proximity, keeping it separate from the active work context.
+
+* TODO Refactor Database Ingestion Script                         :Work:Code:
+SCHEDULED: <2026-06-22 Mon>
+  :PROPERTIES:
+  :Effort:   5.0
+  :END:
+  Baseline: Mid-to-low priority because the start date is two days in the future.
+  Our System: Pushed into the Backlog bucket because its 'Work' tags conflict heavily with the currently running 'School' active context.
+
+** TODO Write Unit Tests for JSON Validation :Code:
+   :PROPERTIES:
+   :Effort:   1.5
+   :END:
+   Baseline: Buried deep at the bottom due to lack of standalone dates.
+   Our System: Kept deep in Backlog; tag mismatch combined with an un-activated parent structure yields a very low aggregate score.
+
+** TODO Ask Systems Team for API Access Keys :Work:
+   Baseline: Hidden deeply inside the nested task architecture.
+   Our System: Held back in Backlog due to high task-switching cost penalty against the active school focus.
+
+* TODO Schedule Annual Physical Exam :Personal:Medical:
+SCHEDULED: <2026-06-20 Sat>
+  Baseline: High priority because it matches today's chronological date exactly.
+  Our System: Dropped to Backlog because it lacks time-pressure urgency and shares no semantic context with current computer operations.
+
+* NEXT Review Weekly Budget and Credit Statements :Financial:
+SCHEDULED: <2026-06-19 Fri>
+  :LOGBOOK:
+  CLOCK: [2026-06-19 Fri 21:00]--[2026-06-19 Fri 21:20] =>  0:20
+  :END:
+  Baseline: Elevated due to past scheduled date.
+  Our System: Positioned in Backlog; the recent interaction weight is too small to overcome the context switch penalty from the active task.
+
+* TODO Buy New Router Cables                               :Homelab:Shopping:
+  Baseline: Sinks directly to the bottom due to zero metadata indicators.
+  Our System: Remains in the Backlog bucket to prevent list starvation, visible only when filtering out the dominant tasks.
+   
+* TODO [#B] Study for SEC+ Certification :Work:Certification:
+DEADLINE: <2026-06-24 Wed>
+:PROPERTIES:
+:Effort:   6.0
+:END:
+:LOGBOOK:
+CLOCK: [2026-06-17 Wed 13:00]--[2026-06-17 Wed 15:00] =>  2:00
+:END:
+Baseline: Moderately high position based entirely on the mid-week deadline.
+Our System: Placed in the Backlog bucket; its high effort and deadline urgency compete against a heavy task-switching penalty.
+
+** NEXT Purchase SEC+ Study Course :Certification:
+Baseline: Hidden underneath the grading parent header node.
+Our System: Held in Backlog; does not inherit parent's 'Work' context directly due to independent tag assignment.
+
+
+* TODO Clean Out Garage Shelves and Workbench :Personal:
+SCHEDULED: <2026-06-14 Sun>
+  Baseline: Highly visible because the scheduled date is nearly a week overdue.
+  Our System: Sorted deeply into Backlog; decay functions suppress it since there is no recorded historical clock interaction.
+
+* TODO Draft Proposal for Client Project                        :Work:Design:
+DEADLINE: <2026-06-26 Fri>
+  :PROPERTIES:
+  :Effort:   8.0
+  :END:
+  Baseline: Placed in the middle tiers based on next week's deadline date.
+  Our System: Positioned in Backlog; high total effort requirement scales down its base score until more time logs are captured.
+
+* TODO [#A] Troubleshoot Automated Backup Script Failure :Homelab:
+SCHEDULED: <2026-06-20 Sat>
+  Baseline: High priority today because it combines an active scheduled date with a Priority A marker.
+  Our System: Placed in Backlog; its priority score is mathematically counterbalanced by the cross-domain context switch penalty.
+
+* TODO Read Cognitive Load Theory Paper                     :School:Academic:
+  :PROPERTIES:
+  :Effort:   1.0
+  :END:
+  :LOGBOOK:
+  CLOCK: [2026-06-20 Sat 14:00]--[2026-06-20 Sat 14:30] =>  0:30
+  :END:
+  Baseline: Sinks to the bottom because it lacks any assigned calendar dates.
+  Our System: Pulled into the Attention-Clustered Focus bucket because it shares the 'School' and 'Academic' tags with your active task.
+
+* TODO CogSci Research Presentation                                  :School:
+DEADLINE: <2026-06-23 Tue>
+  Baseline: Mid-range placement driven by its upcoming Tuesday deadline.
+  Our System: Grouped into the Attention-Clustered Focus bucket; its shared school context overrides its moderate deadline distance.
+
+* NEXT Order Replacement Water Filter for Fridge :Personal:
+  Baseline: Positioned at the bottom due to complete lack of metadata attributes.
+  Our System: Rests safely in Backlog without causing visual distraction from your active focus area.
+
+* TODO Rotate Access Keys and Secrets :Work:Security:
+SCHEDULED: <2026-06-15 Mon>
+  Baseline: Appears near the top because the milestone date is significantly past due.
+  Our System: Dropped to Backlog; suppressed heavily by context penalties until your active task shifts over to 'Work'.
+
+* TODO Organize Digital Photo Album Backups :Personal:Family:
+  :PROPERTIES:
+  :Effort:   2.5
+  :END:
+  Baseline: Sinks to the bottom listing tier due to a lack of tracking parameters.
+  Our System: Maintained inside the standard Backlog pool to minimize executive function strain.
+
+* TODO Practice Clarinet                                   :Personal:Hobbies:
+SCHEDULED: <2026-06-19 Fri>
+  Baseline: Positioned higher up the list because its execution date has passed.
+  Our System: Filtered into Backlog; isolated from active project tasks to preserve immediate cognitive bandwidth.
+
+* NEXT Fix Broken CSS Layout                                    :Homelab:Web:
+  :PROPERTIES:
+  :Effort:   0.5
+  :END:
+  Baseline: Positioned at the bottom tier owing to zero date assignments.
+  Our System: Stored inside Backlog; low effort value prevents it from floating up into active cognitive streams.
+
+* TODO Fill Out Health Insurance Reimbursement Forms :Financial:Personal:
+DEADLINE: <2026-06-30 Tue>
+  Baseline: Positioned near the bottom because the deadline is further out in the month.
+  Our System: Classified under Backlog; low urgency metrics keep it hidden until closer to the target deadline.
+
+* TODO Research Alternative Reverse Proxies                :Homelab:Research:
+  Baseline: Standard baseline layout drops it to the bottom due to missing dates.
+  Our System: Placed into Backlog to eliminate visibility clutter while you work on academic requirements.
+
+* NEXT Backup Task Database                                  :School:Project:
+  Baseline: Drops out of view without explicit date parameters.
+  Our System: Elevated straight into the Attention-Clustered Focus bucket because its tags perfectly align with the current active matrix context.
+
+* TODO Buy Birthday Gift for Mother                                  :Family:
+DEADLINE: <2026-06-22 Mon>
+  Baseline: Placed in the upper mid-tier due to the proximity of the calendar date.
+  Our System: Kept inside Backlog; low context correlation keeps it out of sight until it crosses the critical immediate threshold.
+
+* TODO [#C] Rebuild Desktop Workstation Liquid Cooling Loop :Personal:Hardware:
+SCHEDULED: <2026-06-21 Sun>
+  Baseline: Sorted into the middle tier alongside upcoming weekend dates.
+  Our System: Dropped deep into Backlog due to its low priority status and lack of contextual relation to your active programming tasks.

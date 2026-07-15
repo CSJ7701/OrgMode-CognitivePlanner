@@ -1,0 +1,10 @@
+[project]
+name = "code"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "orgparse>=0.4.20251020",
+    "textual>=8.2.7",
+]
