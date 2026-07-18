@@ -21,3 +21,6 @@ Run =python CLI.py -h= for a full list of command line arguments.
 =CLI.py= takes a single positional argument (the org file to process).
 The most common switch you will use is =--ref-time=, which is used to calculate scores against a time other than now (this is primarily useful for testing).
 
+To emulate the data I used for testing, run this code against the included =test.org= file.
+Compare baseline data (=python CLI.py ./test.org --ref-time "2026-06-18 00:00:00" --baseline=) against the system output (=python CLI.py ./test.org --ref-time "2026-06-18 00:00:00"=).
+
